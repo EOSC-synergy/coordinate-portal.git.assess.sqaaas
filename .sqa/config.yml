@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/coordinate-portal git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-brown-eel.sh
-        container: qc.acc_gimpy-platinum-termite
+        - /usr/bin/env sh .sqa/script.skanky-olive-worm.sh
+        container: qc.acc_shaky-bronze-wrasse
   QC.Doc:
     repos:
       github.com/cessda/coordinate-portal find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-carmine-grasshopper.sh
-        container: qc.doc_tasty-red-booby
+        - /usr/bin/env sh .sqa/script.sleazy-firebrick-flounder.sh
+        container: qc.doc_crappy-dandelion-chicken
       github.com/cessda/coordinate-portal git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-thistle-vole.sh
-        container: qc.doc_flabby-tan-spoonbill
+        - /usr/bin/env sh .sqa/script.lousy-chestnut-abyssinian.sh
+        container: qc.doc_lovely-celadon-havanese
       github.com/cessda/coordinate-portal markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-chartreuse-angora.sh
-        container: qc.doc_wheezy-eggplant-loon
+        - /usr/bin/env sh .sqa/script.scanty-firebrick-manatee.sh
+        container: qc.doc_blurry-ultramarine-bat
   QC.Lic:
     repos:
       github.com/cessda/coordinate-portal licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-crimson-baboon.sh
-        container: qc.lic_gimpy-carmine-dingo
+        - /usr/bin/env sh .sqa/script.gamy-lilac-monkey.sh
+        container: qc.lic_muzzy-orange-sheepdog
   QC.Met:
     repos:
       github.com/cessda/coordinate-portal cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-viridian-ladybird.sh
-        container: qc.met_hasty-smalt-goose
+        - /usr/bin/env sh .sqa/script.sloppy-pear-wallaby.sh
+        container: qc.met_sleazy-copper-fousek
   QC.Sty:
     repos:
       github.com/cessda/coordinate-portal hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-grey-chimpanzee.sh
-        container: qc.sty_wimpy-silver-scorpion
+        - /usr/bin/env sh .sqa/script.skanky-salmon-snake.sh
+        container: qc.sty_lousy-cinnamon-coral
       github.com/cessda/coordinate-portal jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-ultramarine-mayfly.sh
-        container: qc.sty_greasy-razzmatazz-toucan
+        - /usr/bin/env sh .sqa/script.randy-orchid-stoat.sh
+        container: qc.sty_frumpy-cinnamon-millipede
   QC.Ver:
     repos:
       github.com/cessda/coordinate-portal get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-persimmon-fousek.sh
-        container: qc.ver_goopy-saffron-ray
+        - /usr/bin/env sh .sqa/script.gimpy-pumpkin-deer.sh
+        container: qc.ver_trippy-celadon-badger
 timeout: 5400
