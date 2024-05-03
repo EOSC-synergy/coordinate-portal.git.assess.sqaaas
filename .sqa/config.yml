@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/coordinate-portal:
+      branch: main
+      repo: https://github.com/cessda/coordinate-portal.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/coordinate-portal git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-brown-eel.sh
+        container: qc.acc_gimpy-platinum-termite
+  QC.Doc:
+    repos:
+      github.com/cessda/coordinate-portal find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-carmine-grasshopper.sh
+        container: qc.doc_tasty-red-booby
+      github.com/cessda/coordinate-portal git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-thistle-vole.sh
+        container: qc.doc_flabby-tan-spoonbill
+      github.com/cessda/coordinate-portal markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-chartreuse-angora.sh
+        container: qc.doc_wheezy-eggplant-loon
+  QC.Lic:
+    repos:
+      github.com/cessda/coordinate-portal licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-crimson-baboon.sh
+        container: qc.lic_gimpy-carmine-dingo
+  QC.Met:
+    repos:
+      github.com/cessda/coordinate-portal cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-viridian-ladybird.sh
+        container: qc.met_hasty-smalt-goose
+  QC.Sty:
+    repos:
+      github.com/cessda/coordinate-portal hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-grey-chimpanzee.sh
+        container: qc.sty_wimpy-silver-scorpion
+      github.com/cessda/coordinate-portal jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-ultramarine-mayfly.sh
+        container: qc.sty_greasy-razzmatazz-toucan
+  QC.Ver:
+    repos:
+      github.com/cessda/coordinate-portal get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-persimmon-fousek.sh
+        container: qc.ver_goopy-saffron-ray
+timeout: 5400
